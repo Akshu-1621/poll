@@ -70,7 +70,7 @@
             <td>Address A</td>
             <td> Candidate A</td>
             <td><input type="radio" name="poll" id="option1"></td>
-            <td>23</td>
+            <td><span id = "result1">0</span></td>
         </tr>
         <tr>
             <td><img src="images/brs.png" width="100" height="100"></td>
@@ -78,9 +78,28 @@
             <td>Address B</td>
             <td> Candidate B</td>
             <td><input type="radio" name="poll" id="option2"></td>
-            <td>56</td>
+            <td><span id = "result2">0</span></td>
         </tr>
     </table>
+   <script>
+    const option1 = document.getElementById('option1');
+    const option2 = document.getElementById('option2');
+    const result1 = document.getElementById('result1');
+    const result2 = document.getElementById('result2');
    
+    let count1 = 0;
+    let count2 = 0;
+
+    option1.addEventListener('click', () => {
+          count1++;
+          result1.textContent = count1;
+         
+        });
+    option2.addEventListener('click', () => {
+        count2++;
+        result2.textContent = count2;
+        
+    });
+   </script>
 </body>
 </html>
